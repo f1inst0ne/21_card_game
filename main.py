@@ -11,6 +11,15 @@ def player_take_card():
     all_cards.pop(take_index)
     return player_cur_cards, all_cards
 
+def croupier_take_card():
+    take_card = random.randint(1, 11)
+    croupier_cur_cards.append(take_card)
+    take_index = all_cards.index(take_card)
+    all_cards.pop(take_index)
+    return croupier_cur_cards, all_cards
+def check_winner():
+    return sum(player_cur_cards) > sum(croupier_cur_cards)
+
 
 all_cards = []
 
@@ -42,6 +51,24 @@ for i in range(2):
     player_cur_cards.append(take_card)
     take_index = all_cards.index(take_card)
     all_cards.pop(take_index)
-print('Crup cards:', croupier_cur_cards)
-print('Player cards:', player_cur_cards)
-print(all_cards)
+while sum(player_cur_cards) <= 21:
+    print(croupier_cur_cards[0], '#')
+    print(player_cur_cards)
+    print('What do you want to do?:')
+    print('You can:')
+    print('1) Hit')
+    print('2) Stand')
+    print('3) Double down')
+    user_input = input('>>>')
+    if user_input == '1':
+        player_take_card()
+    elif user_input == '2':
+        print(check_winner())
+        break
+    elif user_input == '3':
+        player_take_card()
+        print(check_winner())
+        break
+print(croupier_cur_cards)
+print(player_cur_cards)
+
