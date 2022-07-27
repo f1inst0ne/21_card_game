@@ -1,7 +1,8 @@
 import os
 os.system('clear')
 flag = True
-while flag: 
+while flag:
+    print(' ______________________\n/            ___       \\ \n|   |   /\\  /	 | /    | \n|   |  /__\\ |    |<     | \n| __| /    \\\\___ | \\    | \n|                       | \n|     _____  _____      | \n|    /$$$$$\\/$$$$$\\     | \n|    \\$$$$$$$$$$$$/     | \n|     \\$$$$$$$$$$/      | \n|      \\$$$$$$$$/       | \n|       \\$$$$$$/        | \n|        \\$$$$/         | \n|         \\$$/          | \n|          \\/           | \n|                       | \n|  $$$$$$$$$$$$$$$$$$$  | \n\\_______________________/ \n')
     print('Welcome to blackjack game')
     print('What do you want to do?')
     print('1)Play \n2)Exit')
