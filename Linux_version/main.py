@@ -31,6 +31,8 @@ def check_winner():
         return 'You are the winner!!!!!!!!!!!!'
     elif sum(player_cur_cards) == sum(croupier_cur_cards):
         return 'It is draw-_-'
+    elif sum(player_cur_cards) > 21 and sum(croupier_cur_cards) > 21:
+        return 'It is draw-_-'
     else:
         return 'You are looooser(((((((('
 
